@@ -41,6 +41,12 @@ body ol {
   z-index: 5;
 }
 
+.container.narrow-container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 a{
   text-decoration: none;
 }
@@ -52,18 +58,74 @@ p {
   margin: 0;
 }
 
+address {
+  margin: 10px 0;
+  font-style: normal;
+  max-width: 230px;
+}
+
 .centered {
   float: none;
   margin: 0 auto;
   text-align: center;
 }
 
+.primary-color{
+  color: #2f0238 !important;
+}
+
+.color-white{
+  color: #fff !important;
+}
+
+.bg_strips {
+    background-image: url(./img/banners/bg_stroke.png);
+}
+
+.bg-primary-color{
+  background-color: #2f0238 !important;
+}
+
+.font_regular {
+  font-weight: 400 !important;
+  font-family: "Montserrat", "Myriad Pro", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.bg-off-white {
+  background-color: #f5f5f5 !important;
+}
+
 .text-caps{
-  text-transform: uppercase;
+  text-transform: uppercase !important; 
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.font-md{
+  font-size: 16px;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.flex-row {
+    margin: 0 -20px;
+    display: flex;
+    flex-wrap: wrap;
+    zoom: 1;
+    padding: 30px;
+}
+
+.flex-row:before, .flex-row:after {
+  content: "";
+  display: table;
+}
+
+.flex_row:after {
+  clear: both;
 }
 
 button {
@@ -260,6 +322,22 @@ header {
   display: none;
 }
 
+.banner-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-wrapper {
+  padding: 60px 30px;
+  position: relative;
+}
+
+.banner_bg .section-wrapper {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .banner-content {
   padding-top: 60px;
   position: relative;
@@ -291,8 +369,6 @@ header {
 .main-content{
   position: relative;
   z-index: 1;
-  padding: 20px;
-  margin: auto 10px;
 }
 
 .section-block {
@@ -302,10 +378,31 @@ header {
   position: relative;
 }
 
-.section_wrapper {
-  padding-top: 60px;
-  padding-bottom: 60px;
+
+.section_header {
+  padding-bottom: 40px;
+}
+
+.section-title {
+  font-size: 32px;
+}
+
+.deco-bar {
+  display: block;
+  clear: both;
+}
+
+.deco-bar::after {
+  display: inline-block;
+  content: "";
   position: relative;
+  bottom: 60px;
+  width: 8rem;
+  max-width: 150px;
+  height: 4px;
+  border-radius: 15px;
+  background-color: #bb95bb;
+  margin-top: 5px;
 }
 
 .widget-floated {
@@ -329,7 +426,7 @@ header {
   padding: 20px 15px;
   background: #ffffff;
   border: 3px solid #2f0238;
-  box-shadow: 3px 7px 25px rgb(187 149 187/ 20%);
+  box-shadow: 3px 7px 25px rgb(187 149 187/ 40%);
   border-radius: 5px;
 }
 
@@ -438,7 +535,7 @@ select.form-control {
   width: 100%;
 }
 
-.btn{
+.btn, a.btn{
   border: none;
   text-decoration: none;
   border-radius: 5px;
@@ -456,8 +553,43 @@ select.form-control {
   cursor: pointer;
 }
 
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn.btn-primary{
+  background-color: #2f0238;
+}
+
+.btn.btn-primary:hover{
+  background-color: #c47fc4;
+  color: #2f0238;
+  fill: #2f0238;
+}
+
 .btn.search-tour-btn {
   background-color: #2f0238;
+}
+
+
+
+.btn.btn-default, a.btn.btn-default {
+  background-color: #ffffff;
+  color: #2f0238;
+  fill: #2f0238;
+  border: none;
+}
+
+.btn.btn-default:hover, .btn.btn-default:focus,
+a.btn.btn-default:hover,
+a.btn.btn-default:focus {
+  background-color: #d5d5d5;
+}
+
+.btn-sm.btn, .btn-group-sm > .btn {
+  padding: 1.35em 1.75em;
+  font-size: 11px;
 }
 
 .tour-input-btn .btn {
@@ -473,4 +605,300 @@ select.form-control {
   position:absolute;
   left: 85%;
   top: 35%;
+}
+
+.widget-floated + .section-header {
+  margin-top: 100px;
+  padding-bottom: 40px;
+}
+
+.section-header {
+  padding-bottom: 40px;
+}
+
+.section-title  {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.content-inner {
+  clear: both;
+  width: 100%;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.card-list {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -.1em;
+  margin-right: -.625em;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+
+.tour-card {
+  display: flex;
+  flex: 0 0 20%;
+  max-width: 23%;
+  margin: 20px 12px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgb(24 24 24 / 15%);
+  /* border-radius: 5px;    */
+  color: #312a25;
+  padding:0  0.626em 1.25em;
+  transform: translateY(0);
+  transition: 300ms ease all;
+  flex-basis: 100%;
+  margin-left:13px;
+  /* overflow: hidden; */
+}
+
+.tour-card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 15px rgb(24 24 24 / 40%);
+}
+
+.tour-card-wrapper{
+  background-color: #ffffff;
+  opacity: .85;
+  flex: 1 1 100%;
+}
+
+.tour-card-hd {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  text-transform: uppercase;
+  padding: 15px 10px;
+}
+
+.tour-card-meta {
+  flex: 1;
+  overflow: hidden;
+}
+
+.tour-program-type {
+  letter-spacing: .1em;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  color: rgba(53, 53, 53, 0.75);
+}
+
+.tour-card-banner {
+  position: absolute;
+  right: 0.7px;
+  min-height: 150px;
+  z-index: 0;
+  width: 100%;
+  /* background-color: #bc8a39; */
+  padding: 15px 10px;
+}
+
+.tour-card-banne a:hover{
+  background-color: white;
+}
+
+.tour-card-img {
+  background-size: cover;
+  background-position: center;
+  z-index: 5;
+  background-repeat: no-repeat;
+}
+
+.card_gradient, .tour-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tour-card-bd {
+  padding: 15px 10px;
+  padding-bottom: 20px;
+  margin-top: 150px;
+ 
+}
+
+.info-list-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.tour-support-info {
+  color: #353535;
+  font-size: 12px;
+  margin-top: 1em;
+}
+
+.info-list-item.tour-item-info {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.info-image {
+  display: flex;
+  box-flex: 0;
+  position: relative;
+  top: 22px;
+  flex: 0 0 30px;
+}
+
+.price-box {
+  width: 60px;
+  height: 60px;
+  padding: 8px 4px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.price-box > span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.day {
+  font-size: 1.75em;
+  font-weight: 400;
+  position: relative;
+  top: 5px;
+  /* margin: 4px 0; */
+}
+
+.info-container {
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tour-item-info .info-container {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-container.flex-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.info-list-tem:last-child .info-container {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-item-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.tour-card-support {
+  padding: 10px 15px;
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.tour-budget-banner {
+  background: linear-gradient(0deg, rgba(47, 2, 56, 0.466), rgba(47, 2, 56, 0.534)), url(./img/banners/tour-banner1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-budget-banner .custom-control-group{
+  margin-top: 100px;
+}
+
+footer[role='contentinfo'] {
+  color: #f5f5f5;
+  fill: #f5f5f5;
+  padding: 40px 0;
+}
+
+footer a{
+  color: white;
+}
+
+.foot-block {
+  flex: 1;
+  width: auto;
+  margin: 15px 0;
+}
+
+.foot-block .wrapper {
+    width: 100%;
+    display: block;
+    padding: 0 20px;
+}
+
+.brand-image {
+  display: inline-block;
+}
+
+.brand-image .logo-name{
+  font-size: 50px;
+}
+
+.logo-link {
+  display: block;
+  position: relative;
+  top: 10px;
+  fill: #f5f5f5;
+}
+
+.div-bar {
+  display: block;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+  max-width: 250px;
+  background-color: #bb95bb;
+}
+
+footer[role='contentinfo'] li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.footer_links.last li {
+  display: inline-block;
+  font-size: .85em;
+}
+
+.footer_links.last li + li::before {
+  display: inline-block;
+  content: '|';
+  padding: 0 4px;
+  vertical-align: middle;
+}
+
+.social_links {
+  clear: both;
+  display: block;
+  margin: 10px 0;
 }
